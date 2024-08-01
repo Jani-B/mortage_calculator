@@ -28,6 +28,16 @@ header {
   margin: 1rem 1rem;
 }
 
+header h1 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+header a {
+  color: var(--Slate-700);
+}
+
 main {
   margin: 1rem;
 }
@@ -73,15 +83,26 @@ main {
   border-radius: 5px 0px 0px 5px;
 }
 
-.form-mortage__submit {
-  background-color: green;
+.span-submit {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+.form-mortage input[type="submit"] {
+  width: 90%;
+  background-color: var(--Lime);
   background-image: url("../images/icon-calculator.svg");
-  background-position: 2px 2px;
+  background-position: 20px 12px;
   background-repeat: no-repeat;
-  padding: 0.5rem;
+  padding: 1rem;
   padding-left: 1.5rem;
-  border-radius: 5px;
+  border-radius: 20px;
   border: none;
+  align-items: center;
+  align-self: center;
+  margin: 1rem auto;
 }
 
 .plus-jakarta-sans-500 {
@@ -89,6 +110,7 @@ main {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  color: var(--Slate-700);
 }
 
 .plus-jakarta-sans-700 {
