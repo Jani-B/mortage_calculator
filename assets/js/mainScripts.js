@@ -37,14 +37,11 @@ const calculateMortage = () => {
     let monthlyinterest = interest / 100 / 12;
     let totalPayments = term * 12;
     let shortening = amount / totalPayments;
-    let calculated = Math.round(
+    let calculated =
       (amount * ((1 + monthlyinterest) ** totalPayments * monthlyinterest)) /
-        ((1 + monthlyinterest) ** totalPayments - 1)
-    ).toFixed(2);
-    let calculateInterest = Math.round(
-      calculated - amount / totalPayments
-    ).toFixed(2);
-    let totalSum = Math.round(calculated * 12 * term).toFixed(2);
+      ((1 + monthlyinterest) ** totalPayments - 1);
+    let calculateInterest = calculated - amount / totalPayments;
+    let totalSum = calculated * 12 * term;
 
     if (repayment) {
       imageShown.style.display = "none";
@@ -57,9 +54,9 @@ const calculateMortage = () => {
         </p>
         <div class="final-result">
         <h3>Your monthly repayments </h3>
-        <p>€ ${calculated}</p>
+        <p>€ ${calculated.toFixed(2)}</p>
         <h3>Total you'll repay over the term</h3>
-        <p>€ ${totalSum} </p>
+        <p>€ ${totalSum.toFixed(2)} </p>
         </div>
       </div>`);
     } else if (interestOnly) {
@@ -73,7 +70,7 @@ const calculateMortage = () => {
             </p>
             <div class="final-result">
             <h3>Your monthly interest </h3>
-            <p>€ ${calculateInterest}</p>
+            <p>€ ${calculateInterest.toFixed()}</p>
             </div>
           </div>`);
     } else {

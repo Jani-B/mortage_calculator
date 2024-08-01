@@ -61,6 +61,10 @@ main {
   align-self: center;
 }
 
+.form-mortage input:hover {
+  cursor: pointer;
+}
+
 .form-mortage input[id="amount"] {
   padding-left: 50px;
 }
@@ -307,7 +311,8 @@ main {
     background-color: var(--Slate-900);
     align-content: center;
     border-radius: 0px 20px 20px 100px;
-    min-width: 400px;
+    min-width: 450px;
+    padding-left: 2rem;
   }
 
   .result-area {
