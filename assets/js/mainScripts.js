@@ -1,3 +1,9 @@
+const clearAll = () => {
+  document.getElementById("amount").value = "";
+  document.getElementById("term").value = "";
+  document.getElementById("interest").value = "";
+};
+
 const colorForRadio = () => {
   const repaymentRadio = document.getElementById("js-repayment").checked;
   const interestRadio = document.getElementById("js-interest-only").checked;
