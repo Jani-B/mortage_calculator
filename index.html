@@ -1,61 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Mortgage repayment calculator</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Mortgage repayment calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="plus-jakarta-sans-500">
+        <h1 class="plus-jakarta-sans-700">Mortage Calculator</h1>
+        <p>Clear All</p>
+      </header>
+      <main class="plus-jakarta-sans-500">
+        <div>
+          <form class="form-mortage">
+            <label for="amount">Mortgage Amount:</label><br />
+            <span
+              class="form-mortage__span-input form-mortage__span-input-amount"
+            >
+              <input
+                type="number"
+                id="amount"
+                name="amount"
+                value="add Mortgage Amount"
+                required /></span
+            ><br />
+            <label for="term">Mortage term:</label><br />
+            <span class="form-mortage__span-input">
+              <input type="number" id="term" name="term" value="0" /><br />
+            </span>
+            <label for="interest">Interest Rate</label><br />
+            <span class="form-mortage__span-input">
+              <input
+                type="number"
+                id="interest"
+                name="interest"
+                value="0" /></span
+            ><br /><br />
+            <p>Mortage Type</p>
+            <input
+              type="radio"
+              id="repayment"
+              name="mortage_type"
+              value="Repayment"
+            />
+            <label for="repayment">Repayment</label><br />
+            <input
+              type="radio"
+              id="interest_only"
+              name="mortage_type"
+              value="Interest Only"
+            />
+            <label for="interest_only">Interest Only</label><br /><br />
+            <input
+              class="form-mortage__submit"
+              type="submit"
+              value="Calculate Repayments"
+            />
+          </form>
+        </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <!-- Empty results start -->
 
-  Mortgage Calculator
-  Clear All 
+        Results shown here Complete the form and click “calculate repayments” to
+        see what your monthly repayments would be.
 
-  Mortgage Amount
+        <!-- Empty results end -->
 
-  Mortgage Term
+        <!-- Completed results start -->
 
-  Interest Rate
+        Your results Your results are shown below based on the information you
+        provided. To adjust the results, edit the form and click “calculate
+        repayments” again. Your monthly repayments Total you'll repay over the
+        term
 
-  Mortgage Type
-  Repayment
-  Interest Only
-
-  Calculate Repayments
-
-  <!-- Empty results start -->
-
-  Results shown here
-
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
-
-  <!-- Empty results end -->
-
-  <!-- Completed results start -->
-
-  Your results
-
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
-
-  <!-- Completed results end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <!-- Completed results end -->
+      </main>
+    </div>
+  </body>
 </html>

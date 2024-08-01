@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  /*Primary colors*/
+  --Lime: hsl(61, 70%, 52%);
+  --Red: hsl(4, 69%, 50%);
+
+  /*Neutral colors*/
+  --White: hsl(0, 0%, 100%);
+  --Slate-100: hsl(202, 86%, 94%);
+  --Slate-300: hsl(203, 41%, 72%);
+  --Slate-500: hsl(200, 26%, 54%);
+  --Slate-700: hsl(200, 24%, 40%);
+  --Slate-900: hsl(202, 55%, 16%);
+}
+
+* {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header {
+  margin: 1rem 1rem;
+}
+
+main {
+  margin: 1rem;
+}
+
+.form-mortage {
+  margin-bottom: 2rem;
+}
+
+.form-mortage label {
+  margin-left: 1rem;
+}
+
+.form-mortage input {
+  border-radius: 5px;
+  margin: 1rem auto;
+  padding: 8px;
+  border: 1px solid var(--Slate-300);
+  width: 70%;
+  align-self: center;
+}
+
+.form-mortage input[id="amount"] {
+  padding-left: 50px;
+}
+
+.form-mortage__span-input {
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  display: inline;
+  padding: 8px;
+  margin: 0.5rem;
+}
+.form-mortage__span-input-amount:before {
+  content: "€";
+  font-size: 16px;
+  position: absolute;
+  z-index: 1;
+  top: 4.5px;
+  left: 9px;
+  background-color: var(--Slate-100);
+  padding: 5px 16px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.form-mortage__submit {
+  background-color: green;
+  background-image: url("../images/icon-calculator.svg");
+  background-position: 2px 2px;
+  background-repeat: no-repeat;
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.plus-jakarta-sans-500 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.plus-jakarta-sans-700 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
