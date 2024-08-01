@@ -28,6 +28,7 @@
             <label for="amount">Mortgage Amount:</label><br />
             <span
               class="form-mortage__span-input form-mortage__span-input-amount"
+              id="js_input_amount"
             >
               <input type="number" id="amount" name="amount" required /></span
             ><br />
@@ -44,21 +45,29 @@
               <input type="number" id="interest" name="interest" /></span
             ><br /><br />
             <p>Mortage Type</p>
-            <span class="form-mortage__span-radio">
+            <span
+              class="form-mortage__span-radio"
+              id="js-mortage-span-repayment"
+            >
               <input
                 type="radio"
-                id="repayment"
+                id="js-repayment"
                 name="mortage_type"
                 value="Repayment"
+                onClick="colorForRadio()"
               />
               <label for="repayment">Repayment</label><br />
             </span>
-            <span class="form-mortage__span-radio">
+            <span
+              class="form-mortage__span-radio"
+              id="js-mortage-span-interest"
+            >
               <input
                 type="radio"
-                id="interest_only"
+                id="js-interest-only"
                 name="mortage_type"
                 value="Interest Only"
+                onClick="colorForRadio()"
               />
               <label for="interest_only">Interest Only</label></span
             ><br /><br />

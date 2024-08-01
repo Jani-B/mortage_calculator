@@ -63,6 +63,10 @@ main {
   padding-left: 50px;
 }
 
+.form-mortage input[id="amount"]:focus {
+  outline-color: var(--Lime);
+}
+
 .form-mortage input[id="term"] {
   padding-right: 50px;
 }
@@ -88,7 +92,7 @@ main {
   padding: 8px;
   margin: 0.5rem;
 }
-.form-mortage__span-input-amount:before {
+.form-mortage__span-input-amount::before {
   content: "€";
   font-size: 16px;
   position: absolute;
@@ -98,6 +102,10 @@ main {
   background-color: var(--Slate-100);
   padding: 5px 16px;
   border-radius: 5px 0px 0px 5px;
+}
+
+.form-mortage__span-input-amount:focus-within::before {
+  background-color: var(--Lime);
 }
 
 .form-mortage__span-input-term:before {
