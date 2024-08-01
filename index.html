@@ -12,12 +12,14 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/mainScripts.js"></script>
+
     <title>Mortgage repayment calculator</title>
   </head>
   <body>
     <div class="container">
       <header class="plus-jakarta-sans-500">
-        <h1 class="plus-jakarta-sans-700">Mortage Calculator</h1>
+        <h1 class="plus-jakarta-sans-700">Mortgage Calculator</h1>
         <a href="">Clear All</a>
       </header>
       <main class="plus-jakarta-sans-500">
@@ -27,65 +29,58 @@
             <span
               class="form-mortage__span-input form-mortage__span-input-amount"
             >
-              <input
-                type="number"
-                id="amount"
-                name="amount"
-                value="add Mortgage Amount"
-                required /></span
+              <input type="number" id="amount" name="amount" required /></span
             ><br />
             <label for="term">Mortage term:</label><br />
-            <span class="form-mortage__span-input">
-              <input type="number" id="term" name="term" value="0" /><br />
+            <span
+              class="form-mortage__span-input form-mortage__span-input-term"
+            >
+              <input type="number" id="term" name="term" /><br />
             </span>
             <label for="interest">Interest Rate</label><br />
-            <span class="form-mortage__span-input">
-              <input
-                type="number"
-                id="interest"
-                name="interest"
-                value="0" /></span
+            <span
+              class="form-mortage__span-input form-mortage__span-input-interest"
+            >
+              <input type="number" id="interest" name="interest" /></span
             ><br /><br />
             <p>Mortage Type</p>
-            <input
-              type="radio"
-              id="repayment"
-              name="mortage_type"
-              value="Repayment"
-            />
-            <label for="repayment">Repayment</label><br />
-            <input
-              type="radio"
-              id="interest_only"
-              name="mortage_type"
-              value="Interest Only"
-            />
-            <label for="interest_only">Interest Only</label><br /><br />
+            <span class="form-mortage__span-radio">
+              <input
+                type="radio"
+                id="repayment"
+                name="mortage_type"
+                value="Repayment"
+              />
+              <label for="repayment">Repayment</label><br />
+            </span>
+            <span class="form-mortage__span-radio">
+              <input
+                type="radio"
+                id="interest_only"
+                name="mortage_type"
+                value="Interest Only"
+              />
+              <label for="interest_only">Interest Only</label></span
+            ><br /><br />
             <span class="span-submit">
               <input
                 class="form-mortage__submit plus-jakarta-sans-700"
-                type="submit"
+                type="button"
+                onClick="calculateMortage()"
                 value="Calculate Repayments"
             /></span>
           </form>
         </div>
-
-        <!-- Empty results start -->
-
-        Results shown here Complete the form and click “calculate repayments” to
-        see what your monthly repayments would be.
-
-        <!-- Empty results end -->
-
-        <!-- Completed results start -->
-
-        Your results Your results are shown below based on the information you
-        provided. To adjust the results, edit the form and click “calculate
-        repayments” again. Your monthly repayments Total you'll repay over the
-        term
-
-        <!-- Completed results end -->
       </main>
+      <section class="plus-jakarta-sans-500">
+        <div class="result-area">
+          <p id="js-result">
+            Results shown here Complete the form and click “calculate
+            repayments” to see what your monthly repayments would be.
+          </p>
+          <p id="js-result-amount"></p>
+        </div>
+      </section>
     </div>
   </body>
 </html>

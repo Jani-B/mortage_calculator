@@ -63,6 +63,23 @@ main {
   padding-left: 50px;
 }
 
+.form-mortage input[id="term"] {
+  padding-right: 50px;
+}
+
+.form-mortage input[id="interest"] {
+  padding-right: 50px;
+}
+
+.form-mortage input[type="radio"] {
+  max-width: 50px;
+  accent-color: var(--Lime);
+}
+
+.form-mortage input[type="radio"]:checked {
+  background-color: var(--Lime);
+}
+
 .form-mortage__span-input {
   width: 100%;
   position: relative;
@@ -83,6 +100,39 @@ main {
   border-radius: 5px 0px 0px 5px;
 }
 
+.form-mortage__span-input-term:before {
+  content: "years";
+  font-size: 16px;
+  position: absolute;
+  z-index: 1;
+  top: 4.5px;
+  right: 9px;
+  background-color: var(--Slate-100);
+  padding: 5px 16px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.form-mortage__span-input-interest:before {
+  content: "%";
+  font-size: 16px;
+  position: absolute;
+  z-index: 1;
+  top: 4.5px;
+  right: 9px;
+  background-color: var(--Slate-100);
+  padding: 5px 16px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.form-mortage__span-radio {
+  display: block;
+  border: 1px solid var(--Lime);
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 .span-submit {
   display: block;
   width: 100%;
@@ -90,7 +140,7 @@ main {
   margin: auto;
 }
 
-.form-mortage input[type="submit"] {
+.form-mortage input[type="button"] {
   width: 90%;
   background-color: var(--Lime);
   background-image: url("../images/icon-calculator.svg");
@@ -102,7 +152,49 @@ main {
   border: none;
   align-items: center;
   align-self: center;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
+}
+
+.result-area {
+  background-color: var(--Slate-700);
+  color: var(--Slate-300);
+  padding: 2rem;
+}
+
+.result-area h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--White);
+}
+
+.result-area p {
+  margin-bottom: 1rem;
+}
+
+.final-result {
+  background-color: var(--Slate-900);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px -3px var(--Lime);
+}
+
+.final-result h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--Slate-500);
+}
+
+.final-result p {
+  font-size: 2rem;
+  color: var(--Lime);
+  border-bottom: 1px solid var(--Slate-300);
+  padding-bottom: 1rem;
+}
+
+.final-result p:last-child {
+  color: var(--White);
+  border-bottom: none;
+  padding-bottom: 1rem;
 }
 
 .plus-jakarta-sans-500 {
