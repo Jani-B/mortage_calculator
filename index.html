@@ -24,27 +24,39 @@
       </header>
       <main class="plus-jakarta-sans-500">
         <div>
-          <form class="form-mortage">
+          <form class="form-mortage" onsubmit="signup(event)">
             <label for="amount">Mortgage Amount:</label><br />
             <span
               class="form-mortage__span-input form-mortage__span-input-amount"
               id="js_input_amount"
             >
-              <input type="number" id="amount" name="amount" required /></span
-            ><br />
+              <input
+                type="number"
+                id="amount"
+                name="amount"
+                step=".01"
+                required
+            /></span>
+            <br />
             <label for="term">Mortage term:</label><br />
             <span
               class="form-mortage__span-input form-mortage__span-input-term"
             >
-              <input type="number" id="term" name="term" /><br />
+              <input type="number" id="term" name="term" required /><br />
             </span>
             <label for="interest">Interest Rate</label><br />
             <span
               class="form-mortage__span-input form-mortage__span-input-interest"
             >
-              <input type="number" id="interest" name="interest" /></span
-            ><br /><br />
-            <p>Mortage Type</p>
+              <input
+                type="number"
+                id="interest"
+                name="interest"
+                step=".01"
+                required /></span
+            ><br />
+
+            <p class="mortage-type">Mortage Type</p>
             <span
               class="form-mortage__span-radio"
               id="js-mortage-span-repayment"
@@ -56,7 +68,7 @@
                 value="Repayment"
                 onClick="colorForRadio()"
               />
-              <label for="repayment">Repayment</label><br />
+              <label for="js-repayment">Repayment</label><br />
             </span>
             <span
               class="form-mortage__span-radio"
@@ -69,24 +81,33 @@
                 value="Interest Only"
                 onClick="colorForRadio()"
               />
-              <label for="interest_only">Interest Only</label></span
-            ><br /><br />
+              <label for="js-interest-only">Interest Only</label></span
+            ><br />
             <span class="span-submit">
               <input
                 class="form-mortage__submit plus-jakarta-sans-700"
-                type="button"
+                type="submit"
                 onClick="calculateMortage()"
                 value="Calculate Repayments"
             /></span>
           </form>
         </div>
       </main>
-      <section class="plus-jakarta-sans-500">
+      <section class="result plus-jakarta-sans-500">
         <div class="result-area">
-          <p id="js-result">
-            Results shown here Complete the form and click “calculate
-            repayments” to see what your monthly repayments would be.
-          </p>
+          <img
+            src="assets/images/illustration-empty.svg"
+            alt="illustration image"
+            class="result-image"
+            id="js-result-image"
+          />
+          <span id="js-result">
+            <h3 class="result-start-header">Results shown here</h3>
+            <p class="result-start-para">
+              Complete the form and click “calculate repayments” to see what
+              your monthly repayments would be.
+            </p>
+          </span>
           <p id="js-result-amount"></p>
         </div>
       </section>

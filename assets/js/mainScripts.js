@@ -4,6 +4,10 @@ const clearAll = () => {
   document.getElementById("interest").value = "";
 };
 
+const signup = (event) => {
+  event.preventDefault();
+};
+
 const colorForRadio = () => {
   const repaymentRadio = document.getElementById("js-repayment").checked;
   const interestRadio = document.getElementById("js-interest-only").checked;
@@ -27,6 +31,7 @@ const calculateMortage = () => {
   const interest = Number(document.getElementById("interest").value);
   const repayment = document.getElementById("js-repayment").checked;
   const interestOnly = document.getElementById("js-interest-only").checked;
+  const imageShown = document.getElementById("js-result-image");
 
   if (amount && term && interest) {
     let monthlyinterest = interest / 100 / 12;
@@ -39,11 +44,13 @@ const calculateMortage = () => {
     let calculateInterest = Math.round(
       calculated - amount / totalPayments
     ).toFixed(2);
-    let totalSum = Math.round(calculated * 12 * totalPayments).toFixed(2);
+    let totalSum = Math.round(calculated * 12 * term).toFixed(2);
+
     if (repayment) {
+      imageShown.style.display = "none";
       return (result.innerHTML = `<div class="results">
         <h2>Your results</h2>
-        <p>
+        <p class="result-first-p">
          Your results are shown below based on the information you
           provided. To adjust the results, edit the form and click “calculate
           repayments” again
@@ -56,6 +63,7 @@ const calculateMortage = () => {
         </div>
       </div>`);
     } else if (interestOnly) {
+      imageShown.style.display = "none";
       return (result.innerHTML = `<div class="results">
             <h2>Your results</h2>
             <p>
@@ -69,9 +77,9 @@ const calculateMortage = () => {
             </div>
           </div>`);
     } else {
-      return (result.innerHTML = "Please check Mortage Type");
+      return (result.innerHTML = `<div class="results"><p>Please check Mortage Type</p></div>`);
     }
   } else {
-    return (result.innerHTML = "Please check the input fields again");
+    return (result.innerHTML = `<div class="results"><p>Please check the input fields again</p></div>`);
   }
 };
